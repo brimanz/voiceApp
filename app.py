@@ -2,9 +2,6 @@ import speech_recognition as sr
 import webbrowser
 import pyttsx3
 
-#instalar pyaudio(pendiente)
-
-
 voice = sr.Recognizer()
 engine = pyttsx3.init()
 
@@ -16,7 +13,7 @@ def talk():
 
 		audio = voice.listen(source)
 
-	text = voice.recognize_google(audio, languaje="ES")
+	text = voice.recognize_google(audio, language="ES")
 
 	print(f'Dijiste: {text}')
 	return text.lower()
